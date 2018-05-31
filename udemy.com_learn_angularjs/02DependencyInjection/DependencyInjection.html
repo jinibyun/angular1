@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        // object
+        var Person = function(firstName, lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        //// function
+        //function logPerson()
+        //{
+        //    var john = new Person("John", "Doe");
+        //    console.log(john);
+        //}
+
+        // replace above with below
+        // dependency injection: instead of defining object inside function, pass object to the function
+        // function
+        function logPerson(person) {            
+            console.log(person);
+        }
+
+        var john = new Person("John", "Doe");
+        logPerson(john);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

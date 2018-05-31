@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<!-- Module is for object container: data-ng-app -->
+<!-- 
+you can configure the routes, create custom filters, custom directives. 
+You can get data from different sources using Factories, Services, Providers or Values. 
+You can then even create Controllers using the module. 
+You can think of the module as really just an object container, 
+and then in that container you can have all these different things that you see here.
+-->
+<html data-ng-app="demoApp"> <!--set module name -->
+<head>
+    <title></title>
+</head>
+<body>
+    <div data-ng-controller="SimpleController">
+        <h3>Filter</h3>
+        Name:
+    <br />
+        <input type="text" data-ng-model="name" />
+        {{ name }}
+    <br />
+        <ul>
+            <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name | uppercase }} - {{ cust.city | lowercase }}</li>
+        </ul>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+
+    <script>
+        // Once you’ve referenced the Angular script you’re going to have access to an angular object.
+        // empty array? The answer is this is where dependency injection comes in because your module might actually rely on other modules to get data.
+        var demoApp = angular.module('demoApp', []);
+
+
+        // using module, create controller as below
+        // 1. 
+        //demoApp.controller("SimpleController", function ($scope) {
+        //    $scope.customers = [
+        //            { name: 'John Smith', city: 'Phonix' },
+        //            { name: 'Jane Mary', city: 'Vancouver' },
+        //            { name: 'John Doe', city: 'Toronto' }
+        //    ];
+        //});
+
+        // 2.
+        var controllers = {};
+        controllers.SimpleController = function ($scope) {
+            $scope.customers = [
+                        { name: 'John Smith', city: 'Phonix' },
+                        { name: 'Jane Mary', city: 'Vancouver' },
+                        { name: 'John Doe', city: 'Toronto' }
+                ];
+            };
+
+        demoApp.controller(controllers);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<!-- placeholder for views -->
+        <!-- I don’t have to write the DOM code to do that. It’s just going to happen behind the scenes and now we’re starting to get into a SPA-type of concept here. -->
+		<div data-ng-view=""></div>
+	</div>
+	<script src="Scripts/angular.min.js"></script>
+
+    <!-- note: the following js should be linked for routing -->
+    <!-- ref: http://stackoverflow.com/questions/22653384/angular-1-2-9-uncaught-error-injectormodulerr-even-after-including-ngro -->
+    <script src="Scripts/angular-route-min.js"></script>
+
+	<script>
+	    var demoApp = angular.module('demoApp', ["ngRoute"]);
+
+        // by calling config function, define module routes   
+        // this is really the magic to glue a View to a Controller so that scope gets passed and we can do the data binding and the directives appropriately.
+		demoApp.config(function ($routeProvider) {
+		    $routeProvider
+				.when('/view1',
+						{
+							controller: 'SimpleController',
+							templateUrl: 'Partials/View1.html'
+						})                     
+				.when('/view2',
+						{
+							controller: 'SimpleController',
+							templateUrl: 'Partials/View2.html'
+						}
+					 )
+				.otherwise({ redirectTo: '/view1' });
+		});
+		
+		demoApp.controller("SimpleController", function ($scope) {
+            // property
+		    $scope.customers = [
+				{ name: 'Dave Jones', city: 'Phoenix' },
+				{ name: 'Jamie Riley', city: 'Atlanta' },
+				{ name: 'Heedy Wahlin', city: 'Chandler' },
+				{ name: 'Thomas Winter', city: 'Seattle' }
+			];
+
+		    // method
+            // $scope alread knew what data is being passed
+			$scope.addCustomer = function () {
+				$scope.customers.push(
+					{
+					    name: $scope.newCustomer.name,
+					    city: $scope.newCustomer.city
+					}
+				);
+			};
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJSTestProj", "AngularJSTestProj\AngularJSTestProj.csproj", "{51A35FAF-E7A2-471A-B8AF-417582294ABB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularJSDemos(1)", "http://localhost:1361", "{DF409283-94DD-4AF3-868A-966CEDE7147B}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/AngularJSDemos(1)"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJSDemos\AngularJSDemos\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AngularJSDemos(1)\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AngularJSDemos(1)"
+		Release.AspNetCompiler.PhysicalPath = "AngularJSDemos\AngularJSDemos\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AngularJSDemos(1)\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "AngularJSDemos\AngularJSDemos\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AngularJS Pro By Adam Freeman", "AngularJS Pro By Adam Freeman", "{60185A4D-C869-4812-9DD7-839DA9E1E073}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angularjs", "http://localhost:2532", "{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2532"
+		Debug.AspNetCompiler.PhysicalPath = "AngularJS Pro By Adam Freeman Execution Environment\angularjs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2532\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2532"
+		Release.AspNetCompiler.PhysicalPath = "AngularJS Pro By Adam Freeman Execution Environment\angularjs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2532\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "AngularJS Pro By Adam Freeman Execution Environment\angularjs\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{96229F8E-D3F5-4B75-A909-3019FE307338}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udemy.com_learn_angularjs", "udemy.com_learn_angularjs", "{1FAADB7A-4E27-4B82-BA69-1B3B81123B5A}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "udemy.com_learn_angularjs", "http://localhost:24282", "{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_24282"
+		Debug.AspNetCompiler.PhysicalPath = "udemy.com_learn_angularjs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24282\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_24282"
+		Release.AspNetCompiler.PhysicalPath = "udemy.com_learn_angularjs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24282\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "udemy.com_learn_angularjs\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A35FAF-E7A2-471A-B8AF-417582294ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A35FAF-E7A2-471A-B8AF-417582294ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A35FAF-E7A2-471A-B8AF-417582294ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A35FAF-E7A2-471A-B8AF-417582294ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF409283-94DD-4AF3-868A-966CEDE7147B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF409283-94DD-4AF3-868A-966CEDE7147B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF409283-94DD-4AF3-868A-966CEDE7147B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF409283-94DD-4AF3-868A-966CEDE7147B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4BAC8785-6D31-468F-89CF-CF6CDCF6D7CD} = {60185A4D-C869-4812-9DD7-839DA9E1E073}
+		{A73F0086-A703-4BD5-AE7D-2EAEB9582EFC} = {1FAADB7A-4E27-4B82-BA69-1B3B81123B5A}
+	EndGlobalSection
+EndGlobal

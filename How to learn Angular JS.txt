@@ -1,0 +1,3 @@
+1. Resources
+
+http://weblogs.asp.net/dwahlin/archive/2013/04/12/video-tutorial-angularjs-fundamentals-in-60-ish-minutes.aspx

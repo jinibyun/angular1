@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="demoApp">
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<!-- placeholder for views -->
+		<div data-ng-view=""></div>
+	</div>
+	<script src="Scripts/angular.min.js"></script>
+
+    <!-- note: the following js should be linked fro routing -->
+    <!-- ref: http://stackoverflow.com/questions/22653384/angular-1-2-9-uncaught-error-injectormodulerr-even-after-including-ngro -->
+    <script src="Scripts/angular-route-min.js"></script>
+
+	<script>
+	    var demoApp = angular.module('demoApp', ["ngRoute"]);
+		demoApp.config(function ($routeProvider) {
+		    $routeProvider
+				.when('/view1',
+						{
+							controller: 'SimpleController',
+							templateUrl: 'Partials/View1.html'
+						})                     
+				.when('/view2',
+						{
+							controller: 'SimpleController',
+							templateUrl: 'Partials/View2.html'
+						}
+					 )
+				.otherwise({ redirectTo: '/view1' });
+		});
+
+        // factory
+		demoApp.factory("simpleFactory", function () {
+		    // TIP: async process: $http
+		    var customers = [
+				{ name: 'Dave Jones', city: 'Phoenix' },
+				{ name: 'Jamie Riley', city: 'Atlanta' },
+				{ name: 'Heedy Wahlin', city: 'Chandler' },
+				{ name: 'Thomas Winter', city: 'Seattle' }
+		    ];
+
+		    var factory = {};
+		    factory.getCustomers = function () {
+		        return customers;
+		    };
+		    factory.postCustomer = function (customer) {
+
+		    };
+
+		    // With a factory you create an object, tack on some functions to it and then return that object out of the function.
+		    return factory;
+		});
+		
+        // factory is injected in second parameter
+        // What Angular will do is go look up that factory automatically and inject it in for us.
+		demoApp.controller("SimpleController", function ($scope, simpleFactory) {
+		    $scope.customers = [];
+
+		    init();
+
+		    function init() {
+		        // What AngularJS is going to do at run time is dynamically inject this into the controller 
+		        // so now I’ll have access to this factory object that’s returned out of this function 
+		        // and now I can say factory.getCustomers()
+		        // This provides dependency injecton and it provides a way in which I know I can centrally place 
+		        // where I get customer data or order data or whatever it may be.
+		        $scope.customers = simpleFactory.getCustomers();
+		    }
+
+			$scope.addCustomer = function () {
+				$scope.customers.push(
+					{ name: $scope.newCustomer.name, city: $scope.newCustomer.city }
+				);
+			};
+		});
+
+	</script>
+</body>
+</html>

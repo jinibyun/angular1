@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+    <title></title>
+</head>
+<body>
+    <!--When this [the controller] gets initialised the scope gets passed in but it’s initially empty-->
+    <div data-ng-controller="SimpleController">
+        <h3>Filter</h3>
+        Name:
+    <br />
+        <input type="text" data-ng-model="name" />
+        {{ name }}
+    <br />
+        <ul>
+            <!-- The scope itself is implicitly available. Access $scope's customers property -->
+            <!-- What’s going to happen now is the view, because it knows about the controller,
+                automatically gets passed the scope. Angular does that kind of behind the scenes – it just happens automatically. -->
+            <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name | uppercase }} - {{ cust.city | lowercase }}</li>
+        </ul>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+
+    <script>
+        // this is a basic controller
+        function SimpleController($scope) {
+            // $scope object : dependency injection that is built into AngularJS
+            // $scope injected dynamically
+
+            // add customers property to $scope object
+            $scope.customers = [
+                    { name: 'John Smith', city: 'Phonix' },
+                    { name: 'Jane Mary', city: 'Vancouver' },
+                    { name: 'John Doe', city: 'Toronto' }
+            ];
+        }
+    </script>
+</body>
+</html>

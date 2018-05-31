@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html data-ng-app>
+<head>
+    <title></title>
+</head>
+<body>
+    Name:
+    <br />
+    <input type ="text" data-ng-model="name"/> {{ name }}
+    <br />
+    Iteration:
+    <br />
+    <div class="container" data-ng-init="names=['Dave','Napur','Heedy','Shriva']">
+        <h3>Looping with the ng-repeat directives</h3>
+        <ul>
+            <li data-ng-repeat="personName in names">{{ personName }}</li>
+        </ul>
+    </div>
+
+    <script src="Scripts/angular.min.js"></script>
+</body>
+</html>
